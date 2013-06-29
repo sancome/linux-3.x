@@ -35,8 +35,8 @@ static inline void SleepForHD(int i)
 	if ((syno_boot_hd_count != g_internal_hd_num - 1) && /* the last disk shouldn't wait */
 		(( g_internal_hd_num < 0 ) || /* not specified in boot command line */
 		  syno_boot_hd_count < g_internal_hd_num) ) {
-		printk("Delay 10 seconds to wait for disk %d ready.\n", i);
-		mdelay(10000);
+		printk("Delay 5 seconds to wait for disk %d ready.\n", i);
+		mdelay(5000);
 	}
 	syno_boot_hd_count++;
 }
